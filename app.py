@@ -15,6 +15,9 @@ def search():
     print(jobs)
     return render_template("search.html", jobs=enumerate(jobs), keyword=keyword, count=len(jobs))
 
+@app.route("/file")
+def file():
+    return "file"
 
 if __name__ == '__main__':
     app.run(debug=True)
