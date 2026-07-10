@@ -11,10 +11,9 @@ def hello_world():
 def search():
     keyword = request.args.get("keyword")
     print(keyword)
-    jobs = search_incruit(keyword)
+    jobs = search_incruit(keyword, 2)
     print(jobs)
     return render_template("search.html", jobs=enumerate(jobs))
-
 
 
 if __name__ == '__main__':
