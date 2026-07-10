@@ -13,7 +13,7 @@ def search():
     print(keyword)
     jobs = search_incruit(keyword, 2)
     print(jobs)
-    return render_template("search.html", jobs=enumerate(jobs))
+    return render_template("search.html", jobs=enumerate(jobs), keyword=keyword, count=len(jobs))
 
 
 if __name__ == '__main__':
