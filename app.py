@@ -37,10 +37,10 @@ def file():
         jobs = db[keyword]
     else:    
         jobs = search_incruit(keyword, page)
-        
+
     save_to_csv(jobs)
     return send_file("./downloads.csv", as_attachment=True)
 
     
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
